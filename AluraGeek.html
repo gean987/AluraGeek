@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Description" content="site com crud basico">
+    <title>AluraGeek</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="./Assets/imagens/coracao.svg" alt="coracoes">
+        <span class="logo1">Alura</span><span class="logo2">Geek</span> 
+    </header>
+    <div class="wrapper">
+        <section class="form">
+            <div class="form__titulo">
+                <span>
+                    <p>ADICIONAR</p> 
+                    <p>PRODUTO:</p>
+                </span>
+            </div>
+            <form action="#" class="form__campos">
+                <fieldset class="form__campo">
+                    <input type="text" id="nome" placeholder="nome..." required>
+                </fieldset>
+                <fieldset class="form__campo">
+                    <input type="text" id="valor" placeholder="valor..." maxlength="7" required>
+                </fieldset>
+                <fieldset class="form__campo">
+                    <input type="url" id="imagem" placeholder="imagem url..." required>
+                </fieldset>
+                <fieldset class="form__botoes">
+                    <button type="submit" id="btnAdd">Adicionar</button>
+                    <button type="reset" id="btnReset">Limpar</button>
+                </fieldset>
+            </form>
+        </section>
+        <article class="lista">
+            <div class="lista__titulo">
+                <span>MEUS PRODUTOS:</span>
+            </div>
+           <ul class="lista__carousel" id="itens">
+            </ul>
+        </article>
+    </div>
+    <footer class="rodape">
+        <div class="rodape__cima">
+        <img src="./Assets/imagens/coracao.svg" alt="coracoes">
+        <span class="logo1">Alura</span><span class="logo2">Geek</span>
+        </div>
+           <p>Desenvolvido por Gean</p>
+           <p>Alura LATAM - 2024</p>
+    </footer>
+    <!-- insercao de jQuery para deixar o valor monetario no input valor-->
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script>
+        $('#valor').mask("#.##0,00", {reverse: true});
+    </script>
+    <script type="module" src="./Assets/addprodutos.js"></script>
+    <script type="module" src="./Assets/listarprodutos.js"></script>
+</body>
+</html>

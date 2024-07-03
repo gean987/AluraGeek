@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Press+Start+2P&display=swap');
+
+:root{
+    --corPrimaria: #03318C;
+    --corItens: #5D04D9;
+    --corTitulo: #ff0000;
+    --corTexto1: #FFFFFF;
+    --sombra: #888888;
+}
+
+*{
+margin: 0;
+border: 0;
+}
+
+body{
+    height: 100vh;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 3rem;
+    background-color: var(--corTexto1);
+}
+
+body span{
+    font-family: "Press Start 2P";
+    font-size: 2rem;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--corItens);
+    width: 100%;
+    padding: 2rem 0 2rem 0;
+}
+
+.wrapper{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.form__titulo{
+    margin: 2rem;
+}
+
+.form__campos{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.form__campo {
+    width: 100%;
+}
+
+.form__campo::-webkit-outer-spin-button, ::-webkit-inner-spin-button {
+ 
+-webkit-appearance: none;
+margin: 0;
+    
+}
+
+
+
+.form__campo input{
+    width: 100%;
+    border: solid 3px var(--corPrimaria);
+    border-radius: 2rem;
+    padding: 20px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    box-sizing: border-box;
+}
+
+::placeholder{
+    color: var(--corPrimaria);
+}
+
+.form__botoes{
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0 2.5rem 2.5rem 2.5rem;
+}
+
+.form__botoes button{
+    width: 100%;
+    padding: 1rem;
+    border: solid 3px var(--corPrimaria);
+    border-radius: 15px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: center;
+}
+
+#btnAdd{
+    background-color: var(--corPrimaria);
+    color: var(--corTexto1);
+}
+
+#btnReset{
+    background-color: var(--corTexto1);
+    color: var(--corPrimaria);
+}
+
+.lista{
+    width: 90%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3.5rem;
+    padding: 2rem;
+}
+
+.lista__carousel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 800px;
+    overflow-y: auto;
+    height: 860px;
+} 
+
+
+.lista__produtos__item{
+    min-width: 20rem;
+    height: 400px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    background-color: var(--corItens);
+    border: 6px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0px 5px 3rem 10px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: var(--corTexto1);
+    box-shadow: -10px 1px var(--sombra);
+}
+
+.lista__produtos__item img{
+    width: 18rem;
+    max-height: 18rem;
+}
+
+.lista__produtos__item__val{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.lixeira{
+    background: none;
+}
+
+.lista__produtos__item__val img{
+     width: 1.5rem; 
+}
+
+.rodape{
+    box-sizing: border-box;
+    width: 100%;
+    background-color: var(--corItens);
+    padding: 3rem;
+    text-align: center;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 1rem;
+    color: var(--corTexto1);
+}
+
+.rodape :nth-child(n){
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo1{
+    color: var(--corTexto1);
+}
+
+.logo2{
+    color: var(--corTitulo);
+}
+
+
+@media(min-width:1024px){
+
+body{
+width: fit-content;
+
+}
+
+.wrapper{
+
+flex-direction: row-reverse;
+
+align-items: baseline;
+
+padding: 2rem;
+
+margin: 1rem;
+
+gap: 10rem;
+
+}
+
+.form__campos{
+
+width: 100%;
+
+max-width: 400px;
+
+}
+
+
+.lista{
+
+padding: 1rem;
+
+box-shadow: -10px 10px var(--sombra);
+
+}
+
+.lista__carousel{
+
+    height: 1024px;
+
+    box-sizing: border-box;
+
+    padding: 1rem;
+}
+
+
+
+.lista__produtos__item{
+
+min-width: 0;
+
+max-width: 15rem;
+
+height: 300px;
+
+}
+
+.lista__produtos__item img {
+    width: 12rem;
+    max-height: 12rem;
+}
+
+.lista__produtos__item__val img{
+    width: 1.5rem;
+}
+
+.rodape{
+
+padding: 0 0 1rem 0;
+    
+}
+
+}
+
+
+@media(min-width:1241px){
+
+body{
+
+width: auto;
+
+}
+
+}
