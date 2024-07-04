@@ -3,7 +3,7 @@ let produtos = [];
  conectaProd();
 
 async function conectaProd(){
-    const conecta = await fetch("http://localhost:3000/produtos")
+    const conecta = await fetch("https://6685f76983c983911b006c66.mockapi.io/produtos/itens")
      produtos = await conecta.json() 
      inserirProdutos(produtos)     
 }
@@ -48,7 +48,7 @@ async function conectaProd(){
     
     
 async function criarProduto (nome, preco, imagem){
-    await fetch("http://localhost:3000/produtos", {
+    await fetch("https://6685f76983c983911b006c66.mockapi.io/produtos/itens", {
         method:"POST",
         headers:{
             "Content-type": "application/json"
@@ -66,7 +66,7 @@ async function criarProduto (nome, preco, imagem){
 }
 
 async function excluirProduto(id){
-    await fetch(`http://localhost:3000/produtos/${id}`, {
+    await fetch(`https://6685f76983c983911b006c66.mockapi.io/produtos/itens/${id}`, {
         method:"DELETE",
     } )
     await conectaProd()

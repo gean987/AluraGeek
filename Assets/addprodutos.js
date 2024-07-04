@@ -4,7 +4,14 @@ const form = document.querySelector(".form__campos")
 
 form.addEventListener("submit", (event) =>{
     event.preventDefault();
+    const campoNome = document.getElementById("nome")
+    const campoValor = document.getElementById("valor")
+    const campoImg = document.getElementById("imagem")
     addProduto(event)
+
+    campoNome.value = ''
+    campoValor.value = ''
+    campoImg.value = ''
 })
 
 
